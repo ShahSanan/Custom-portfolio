@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">  <!-- username sananshah pass too -->
+<head>
+    <link rel="icon" href="/static/img/login.png">
+    <!-- Remove or leave the title tag empty -->
+    <title>Log In</title>
+    <!-- Your other meta tags, stylesheets, and scripts -->
+</head>
+{% extends 'login.html' %}
+{% block content %}
+<form method="post" action="{% url 'login' %}" >
+    {% csrf_token %}
+    <h3>Log In</h3>
+    
+    <label for="username">Username</label>
+    <input type="text" placeholder="Username" id="username" name="msd_username" required>
+
+    <label for="password">Password</label>
+    <input type="password" placeholder="Password" id="password" name="kohli_password" required>
+
+    
+    <div class="social">
+        <div class="go"><i class="fab fa-google"></i> Google</div>
+        <div class="fb"><i class="fab fa-facebook"></i> Facebook</div>
+    </div>
+    
+    <div class="button-container">
+        <button type="submit">Log In</button>
+        <a href="/signup">Create new account</a>
+    </div>
+
+</form>
+
+<style>
+    .button-container {
+        text-align: center;
+        margin-bottom: 20px; /* Adjust this margin if needed */
+    }
+
+    .button-container button {
+        width: 100%;
+        background-color: #ffffff;
+        color: #080710;
+        padding: 15px 0;
+        font-size: 18px;
+        font-weight: 600;
+        border-radius: 5px;
+        cursor: pointer;
+        text-align: center;
+        margin-bottom: 0px;
+    }
+
+    .social {
+        display: flex;
+        justify-content: space-evenly; /* Adjust as needed */
+        margin-top: 20px; /* Adjust as needed */
+    }
+
+    .social div {
+        cursor: pointer;
+    }
+</style>
+
+
+{% endblock %}

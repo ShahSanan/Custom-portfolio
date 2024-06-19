@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/static/img/review.png">
+<title>Reviews</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+  }
+
+  .testimonial {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+  }
+
+  .testimonial:hover {
+    transform: translateY(-5px);
+  }
+
+  .testimonial p {
+    color: #666;
+  }
+
+  .testimonial-author {
+    margin-left: 20px;
+  }
+
+  .testimonial-author img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Ensures the image is circular */
+    object-fit: cover; /* Maintain aspect ratio and crop image if needed */
+    border: 2px solid #007bff; /* Border color */
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Testimonials</h1>
+
+  <div class="testimonial">
+    <img src="/static/img/profile1.png" alt="Profile Picture">
+    <div class="testimonial-author">
+      <p>"Working with Sanan was an absolute pleasure. He delivered high-quality work on time and exceeded my expectations."</p>
+      <p>- Nazir Wani, Owner of Local Business</p>
+    </div>
+  </div>
+
+  <div class="testimonial">
+    <img src="/static/img/profile2.png" alt="Profile Picture">
+    <div class="testimonial-author">
+      <p>"I highly recommend Sanan for their professionalism and attention to detail. They truly care about their clients."</p>
+      <p>- Ishfaq Ahmad, Local Business owner</p>
+    </div>
+    
+  </div>
+  <div class="testimonial">
+    <img src="/static/img/person5.png" alt="Profile Picture">
+    <div class="testimonial-author">
+      <p>"I am extremely satisfied with the services provided by Sanan. A highly skilled person with respect for others. Delivered exactly what I needed."</p>
+      <p>- Sarah Johnson, Freelance Developer</p>
+    </div>
+  </div>
+  
+  <div class="testimonial">
+    <img src="/static/img/profile2.png" alt="Profile Picture">
+    <div class="testimonial-author">
+      <p>"Good website developer. Good prices as well"</p>
+      <p>- Mahid Zargar, Python Developer</p>
+    </div>
+  </div>
+  
+  <div class="testimonial">
+    <img src="static/img/profile2.png" alt="Profile Picture">
+    <div class="testimonial-author">
+      <p>"I couldn't be happier with the results of my project. Developer was professional, efficient, and easy to communicate with. I highly recommend their services. Value for money"</p>
+      <p>- Amir Majid, Blogger</p>
+    </div>
+  </div>
+  
+
+  <!-- Add more testimonials as needed -->
+</div>
+
+</body>
+</html>
+{% endblock body %}

@@ -1,0 +1,12 @@
+.lol {
+margin-left: 20px;
+align-content: 20px;
+width: 70px;
+}
+
+.dhoni {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    max-width: 400px; /* Optional: Limit container width */
+  }

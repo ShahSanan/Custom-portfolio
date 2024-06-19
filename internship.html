@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Internship Offer</title>
+<style>
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  .btn:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+  }
+  .contact .btn:active {
+    background-color: #1e7e34;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #dbd8d8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+  }
+
+  .internship {
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .internship h2 {
+    margin-bottom: 10px;
+    color: #333;
+  }
+
+  .internship p {
+    color: #666;
+    margin-bottom: 10px;
+  }
+
+  .internship .pricing {
+    font-weight: bold;
+    color: #007bff;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Give Internship Offer</h1>
+
+  <div class="internship">
+    <h2>Part-Time Internship (1-2 hours/day)</h2>
+    <p>Duration: Up to 3 months</p>
+    <p>Price: Starting from <span class="pricing">₹27,000</span> per month</p>
+    <p>Description: I can work for about 1-2 hours per day only due to a busy schedule but I want let you down.  <span style="font-weight: bold;" >Price</span> depends on different things of the Work.</p>
+    <a href="/contact" class="btn">Hire</a>
+  </div>
+
+  <div class="internship">
+    <h2>Full-Time Internship (2-3 hours/day)</h2>
+    <p>Duration: Up to 6 months</p>
+    <p>Price: Starting from <span class="pricing">₹35,000</span> per month</p>
+    <p>Description: <span style="font-weight: bold;" >Pricing</span> depends on different things of the Work.</p>
+    <a href="/contact" class="btn">Hire</a>
+  </div>
+</div>
+
+</body>
+</html>
+{% endblock body %}

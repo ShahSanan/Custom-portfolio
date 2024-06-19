@@ -1,0 +1,256 @@
+{% extends 'about.html' %}
+
+{% block title %}
+Customize
+{% endblock title %}
+
+{% block head %}
+<link rel="icon" href="car.jpg">
+{% endblock head %}
+
+{% block body %}
+<style>
+
+  /* CSS code for styling the form */
+#zero {
+  width: 100%;
+  height: 100%;
+}
+#customizationForm {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+#customizationForm h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#customizationForm label {
+  font-weight: bold;
+}
+
+#customizationForm input,
+#customizationForm select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#customizationForm button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#customizationForm button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive styling for smaller screens */
+@media screen and (max-width: 600px) {
+  #customizationForm {
+    padding: 10px;
+  }
+
+  #customizationForm h1 {
+    font-size: 1.5rem;
+  }
+
+  #customizationForm input,
+  #customizationForm select {
+    padding: 6px;
+  }
+
+  #customizationForm button {
+    padding: 8px;
+  }
+}
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f1f1f1;
+  background-image:url("/static/img/bg.jpg");
+  background-size: cover;
+
+}
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+h1 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 8'><polygon points='0,0 14,0 7,8'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #444;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    margin: 20px auto;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  label {
+    font-size: 1rem;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  select {
+    font-size: 1rem;
+  }
+
+  button[type="submit"] {
+    font-size: 1rem;
+  }
+}
+</style>
+<body></body>
+<div class="container mt-5">
+  <h1 class="text-center mb-4">Build A Custom Website</h1>
+  
+  <form id="customizationForm" action="/handle-customization/" method="post">
+    {% csrf_token %}
+    <div class="mb-3">
+        <label for="name" class="form-label">Your Name</label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+      </div>
+      
+    <div class="mb-3">
+      <label for="pages" class="form-label" aria-required="true">Number of Pages of Website</label required>
+      <select pattern="\d*" title="Please enter tis field" class="form-select" id="pages" name="pages" required>
+        <option selected>Select</option>
+        <option selected value="1">5</option>
+        <option value="2">6</option>
+        <option value="3">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <!-- Add more options as needed -->
+      </select>
+    </div>
+
+    <div class="mb-3">
+        <label for="budget" class="form-label">Budget</label>
+        <input type="text" class="form-control" id="budget" name="budget" pattern="\d*" title="Please enter only numbers and remove signs" placeholder="Enter your budget" required>
+      </div>
+      
+    <div class="mb-3">
+      <label for="payment" class="form-label">Currency</label>
+      <select class="form-select" id="payment" name="payment" required>
+        <option>Select</option>
+        <option selected >U.S.D</option>
+        <option >I.N.R</option>
+        <option>P.K.R</option>
+        <option >Riyal</option>
+        <option >DIRHAM</option>
+        <option >A.E.D</option>
+        <option >Rupees</option>
+        <option >Pounds</option>
+        <option >Euros</option>
+        <!-- Add more options as needed -->
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label for="delivery" class="form-label">Delivery Time</label>
+      <select class="form-select" id="delivery" name="delivery" required>
+        <option selected>Select</option>
+        <option >5 days</option>
+        <option selected >7 days</option>
+        <option >14 days</option>
+        <option >21 days</option>
+        <!-- Add more options as needed -->
+      </select>
+      <div class="mb-3">
+        <label for="email" class="form-label">Your Email</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+    </div>
+    
+    </div>
+     <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <input  type="text" class="form-control" id="description" name="details" placeholder="Details here">
+      </div>
+    <!-- Add more customization options as needed -->
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+<script>
+  document.getElementById('customizationForm').addEventListener('submit', function() {
+    var userName = document.getElementById('name').value;
+    document.getElementById('customizationForm').setAttribute('name', userName + "'s Customization Form");
+  });
+</script>
+
+{% endblock body %}

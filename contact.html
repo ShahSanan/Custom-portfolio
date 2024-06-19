@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="/static/img/phone.png">
+{% extends 'base.html' %}
+{% block title %}
+Contact
+{% endblock title %}
+{% block body %}
+
+<style>
+    body {
+        background-color: #f5f5f5;
+        font-family: Arial, sans-serif;
+    }
+
+    #container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    #contact-image {
+        width: 100%;
+        max-width: 300px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    #contact-heading {
+        text-align: center;
+        font-size: 24px;
+        font-weight: 600;
+        color: #333;
+        margin-top: 20px;
+    }
+
+    #contact-form {
+        margin-top: 30px;
+    }
+
+    #contact-form .form-control {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    #contact-form label {
+        font-weight: bold;
+    }
+
+    #submit-button {
+        width: 100%;
+        padding: 10px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    #submit-button:hover {
+        background-color: #45a049;
+    }
+</style>
+
+<form method="post" action="/contact">
+    {% csrf_token %}
+    <div id="container">
+        <img id="contact-image" src="/static/img/s.jpg">
+         <label for="Name">Enter name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Your name">
+            <div id="contact-form">
+                <label for="exampleFormControlInput1">Email address</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
+
+            <label for="Number">Enter Valid Phone Number</label>
+            <input type="tel" class="form-control" id="phone" name="phone" placeholder="Your number here">
+
+            <label for="Feedback">Enter Feedback(optional)</label>
+            <input type="text" class="form-control" id="desc" name="desc" placeholder="Feedback(optional)">
+
+            <button id="submit-button" type="submit">Submit</button>
+        </div>
+    </div>
+</form>
+
+
+{% endblock body %}

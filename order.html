@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+<head>
+    <script src="/docs/5.3/assets/js/color-modes.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.122.0">
+    <link rel="icon" href="/static/img/wow.png" type="image/png">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="thala.css">
+    <link href="new.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: 'Inter', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .out {
+            font-family: Arial, Helvetica, sans-serif;
+            border: 2px solid #ccc;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+            margin-top: 50px;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        #thanks {
+            text-decoration: underline;
+            font-family: 'Trebuchet MS', Arial, sans-serif;
+            font-weight: 600;
+            text-transform: capitalize;
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 30px;
+            color: #007bff;
+        }
+
+        #text {
+            font-size: 26px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-bottom: 2px solid #ccc;
+            width: 100%;
+            display: inline-block;
+            margin-bottom: 30px;
+        }
+
+        #basic {
+            font-size: 22px;
+            font-family: 'Arial Narrow Bold', Arial, sans-serif;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #007bff;
+        }
+
+        #days {
+            margin-top: 2px;
+            text-align: left;
+            padding-top: 0px;
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #6c757d;
+        }
+
+        /* Styles for buttons */
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 5px;
+            text-decoration: none;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 30px;
+            margin-bottom: 50px;
+            position: relative;
+            left: 501px;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Styles for form inputs */
+        .form-input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+            font-family: 'Inter', Arial, sans-serif;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #ff9d00;
+        }
+
+        .form-label {
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        select.form-input {
+            height: 50px;
+            padding: 10px;
+        }
+
+        .col-md-6 {
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 767.98px) {
+            .col-md-6 {
+                width: 100%;
+            }
+        }
+
+        /* Additional Styling */
+        .form-check-label {
+            font-size: 14px;
+            color: #6c757d;
+            margin-bottom: 10px;
+        }
+
+        .form-check-input {
+            margin-right: 10px;
+        }
+
+        .form-check {
+            margin-bottom: 20px;
+        }
+
+        .list-group-item {
+            background-color: #f8f9fa;
+            border-color: #dee2e6;
+        }
+
+        .list-group-item strong {
+            color: #37ff00;
+            stroke: black;
+            stroke-width: 100px;
+            -webkit-text-stroke: black;
+          
+        }
+
+        .list-group-item span {
+            color: #6c757d;
+        }
+
+        hr {
+            border-top: 2px solid #ccc;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <main>
+        <div class="py-5 text-center">
+            <img src="/static/img/billing.gif" alt="" width="72" height="57" loading="lazy">
+            <h1 class="out">Checkout form</h1>
+            <p class="lead" id="thanks">Thanks for your Order</p>
+        </div>
+
+        <div class="row g-5">
+            <div class="col-md-5 col-lg-4 order-md-last">
+                <h4 class="d-flex justify-content-between align-items-center mb-3">
+                    <span id="text" class="text-primary">Simple</span>
+                </h4>
+                <ul class="list-group mb-3">
+                    <li class="list-group-item d-flex justify-content-between lh-sm">
+                        <div>
+                            <h4 id="basic">Basic Website</h4>
+                        </div>
+                        <div>
+                            <h3 id="days">2-3 Pages. 7 days delivery</h3>
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between">
+                        <span>Total (USD)</span>
+                        <strong>$182.00</strong>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-7 col-lg-8">
+                <h2 class="mb-3" style="font-size: 20px;">Billing address</h2>
+                <form action="{% url 'process_checkout' %}" method="post">
+                    {% csrf_token %}
+                    <div class="row g-3">
+                        <div class="col-sm-6">
+                            <label for="firstName" class="form-label">First name</label>
+                            <input type="text" class="form-input" id="firstName" name="firstName" placeholder="Required" value="" required>
+                        </div>
+                        <div class="col-sm-6">
+                            <label for="lastName" class="form-label">Last name</label>
+                            <input type="text" class="form-input" id="lastName" name="lastName" placeholder="Required" value="" required>
+                        </div>
+                        <div class="col-12">
+                            <label for="email" class="form-label">Email <span class="text-body-secondary">(Required)</span></label>
+                            <input type="email" class="form-input" name="email" id="email" placeholder="you@example.com" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="Country" class="form-label">Country</label>
+                            <input type="text" class="form-input" name="country" id="state" placeholder="Enter your Country" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="state" class="form-label">State</label>
+                            <input type="text" class="form-input" name="state" id="state" placeholder="Enter your state" required>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="zip" class="form-label">Zip</label>
+                            <input type="text" class="form-input" name="zip" id="zip" placeholder="ZIP">
+                        </div>
+                    </div>
+                    <hr class="my-4">
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="same-address">
+                        <label class="form-check-label" for="same-address">Shipping address is the same as my billing address</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="save-info">
+                        <label class="form-check-label" for="save-info">Save this information for next time</label>
+                    </div>
+                    <hr class="my-4">
+                    <div class="col-md-6">
+                        <label name="payment" for="paymentMethod" class="form-label">Payment Method</label>
+                        <select class="form-input" id="payment" name="paymentMethod" required>
+                            <option value="" selected disabled>Select Payment Method</option>
+                            <option selected value="credit">Credit Card</option>
+                            <option value="debit">Debit Card</option>
+                            <option value="paypal">PayPal</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="cc-name" class="form-label">Name on card</label>
+                        <input type="text" class="form-input" name="cc-name" id="cc-name" placeholder="Full Name as Displayed on Card">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="cc-number" class="form-label">Credit card number</label>
+                        <input type="text" class="form-input" name="cc_number" id="cc_number" placeholder="CC Number as Displayed on Card">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="cc-expiration" class="form-label">Expiration</label>
+                        <input type="text" class="form-input" name="cc-expiration" id="cc-expiration" placeholder="Expiration">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="cc-cvv" class="form-label">CVV</label>
+                        <input type="text" class="form-input" name="cc-cvv" id="cc-cvv" placeholder="CVV">
+                    </div>
+                    <hr class="my-4">
+                    <button class="button" type="submit">Continue to checkout</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer class="my-5 pt-5 text-body-secondary text-center text-small">
+        <p class="mb-1">&copy; 2017–2024 Sanan Shawkat</p>
+       
+    </footer>
+</div>
+</body>
+</html>

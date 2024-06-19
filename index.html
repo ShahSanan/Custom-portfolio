@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="/static/img/home.png">
+    <!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-qOR6zea6ZLSN6RoNKnNcZcACV6t0/FR4aYP7DRbGAAucuBC3/28xk+gB4nd+XjBtFgibtfX0Uq/hbpWgnp1Dpg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+{% extends 'base.html' %}
+{% block title %}
+Home
+{% endblock title %}
+
+{% block body %}
+
+<style>
+  /* Styles for carousel */
+  #carouselExample {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  #carouselExample img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Styles for Hire Here section */
+  #hireHereCard {
+    position: relative;
+    padding-left: 3px;
+    width: 400px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  #hireHereCard:hover {
+    transform: scale(1.05);
+  }
+
+  #hireHereCard h1 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  #hireHereCard img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+  }
+
+  #hireHereCard p {
+    font-weight: bold;
+    font-family: 'Lucida Sans';
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+  }
+
+  #hireHereCard .btn-group {
+    text-align: center;
+    margin-top: 0px;
+  }
+
+  #hireHereCard .btn {
+    margin: 0 5px;
+  }
+
+
+  /* Animations */
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideInFromRight {
+    0% {
+      transform: translateX(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+body {
+  
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+/* Styling for the footer */
+.footer {
+  background-color: #343a40; /* Dark background color */
+  color: #fff; /* Text color */
+}
+
+.footer h5 {
+  color: #fff; /* Header text color */
+}
+
+.footer ul {
+  padding-left: 0; /* Remove default padding */
+}
+
+.footer ul li {
+  list-style: none; /* Remove bullet points */
+  margin-bottom: 10px; /* Spacing between list items */
+}
+
+.footer ul li a {
+  color: #fff; /* Link text color */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s; /* Smooth transition for color change */
+}
+
+.footer ul li a:hover {
+  color: #f8f9fa; /* Change text color on hover */
+}
+
+/* Social media icons */
+.footer ul li a i {
+  margin-right: 5px; /* Spacing between icon and text */
+}
+
+</style>
+<body background="/static/img/back.jpg">
+   
+
+<div id="hireHereCard" class="card shadow-sm my-2">
+  <h1>Hire Here</h1>
+  <a href="/about"><img src="/static/img/work.gif" alt="Work Demo"></a>
+  <div class="card-body">
+    <p>Hi, I am Sanan Shawkat, a web developer from Kashmir, India. You can hire me here.</p>
+    <div class="btn-group">
+      <a href="/about">
+        <button type="button" class="btn btn-sm btn-outline-secondary">Hire</button>
+      </a>
+      <a href="/contact">
+        <button type="button" class="btn btn-sm btn-outline-secondary">Contact</button>
+      </a>
+    </div>
+  </div>
+</div>
+
+
+
+{% endblock body %}
